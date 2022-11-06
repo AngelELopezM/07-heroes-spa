@@ -41,15 +41,19 @@ export const SearchHero = () => {
                             value={searchText}
                             onChange={onInputChange}
                         />
+                        <button type="submit" className="btn btn-outline-primary mt-1">Search</button>
                     </form>
-                    <button className="btn btn-outline-primary mt-1">Search</button>
                 </div>
 
                 <div className="col-7">
                     <h4>Results</h4>
                     <hr />
-                    <div className="alert alert-primary">Search a hero</div>
-                    <div className="alert alert-danger">No result found</div>
+                    {
+                        (q === '') && <div className="alert alert-primary">Search a hero</div>
+                    }
+                    {
+                        (q.length>0 && heroes.length === 0) && <div className="alert alert-danger">No result found</div>
+                    }
 
                     {
                         heroes.map(x =>

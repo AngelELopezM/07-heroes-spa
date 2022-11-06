@@ -3,7 +3,7 @@ import { Navbar } from "../components/Navbar"
 
 import { DCPage, HeroDetails, MarvelPage, SearchHero } from '../'
 
-export const HeroesRoutes = () => {
+export const  HeroesRoutes = () => {
     return (
         <>
             <Navbar />
